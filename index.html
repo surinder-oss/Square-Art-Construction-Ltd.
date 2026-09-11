@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Square Art Construction Ltd &mdash; Residential Builders, Calgary</title>
+<meta name="description" content="Square Art Construction Ltd builds single-family homes, duplexes and townhomes across Calgary &mdash; foundations, framing, roofing, drywall, paint, flooring and finishing. Residential construction only." />
+<meta name="theme-color" content="#F7F2E8" />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="site.css" />
+<style>
+/* ---- signature build SVG ---- */
+.bsvg .d { fill: none; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.bsvg .lum { stroke: #c9a87c; stroke-width: 3; stroke-linecap: round; }
+.bsvg .lum-h { stroke: #e0bd8d; stroke-width: 5; stroke-linecap: round; }
+.bsvg .conc { stroke: #8d867c; stroke-width: 3; }
+.bsvg .emb { stroke: #e85d2f; stroke-width: 3; }
+.bsvg .dim { stroke: #6f6558; stroke-width: 1.5; }
+.bsvg text { font-family: "Space Mono", monospace; letter-spacing: .18em; fill: #9a8d7c; }
+.bsvg .fade { opacity: 0; }
+.build-stage:first-child { opacity: 1; }
+html.reduced .bsvg .d { stroke-dashoffset: 0; }
+html.reduced .bsvg .fade { opacity: 1; }
+.trade-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; }
+.trade-cell {
+  border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px;
+  display: flex; gap: 16px; align-items: baseline;
+  transition: transform .35s var(--ease), border-color .3s, background .3s;
+}
+.trade-cell:hover { transform: translateY(-5px); border-color: var(--ember); background: rgba(232,93,47,.04); }
+.trade-cell .n { font-family: "Space Mono", monospace; font-size: 12px; letter-spacing: .18em; color: var(--ember); }
+.trade-cell h3 { font-size: clamp(1.05rem, 1.7vw, 1.45rem); }
+@media (max-width: 860px) { .trade-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .trade-grid { grid-template-columns: 1fr; } }
+.hero-bg-num {
+  position: absolute; right: -2%; top: 10%; z-index: -1;
+  font-family: "Clash Display", sans-serif; font-weight: 600;
+  font-size: clamp(14rem, 34vw, 30rem); line-height: 1;
+  color: transparent; -webkit-text-stroke: 1.5px var(--line);
+  user-select: none;
+}
+</style>
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="favicon.png" sizes="32x32" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
+<link rel="canonical" href="https://squareartconstruction.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Square Art Construction Ltd" />
+<meta property="og:locale" content="en_CA" />
+<meta property="og:title" content="Square Art Construction Ltd &mdash; Residential Builders, Calgary" />
+<meta property="og:description" content="Residential builders in Calgary — single-family homes, duplexes and townhomes, foundation to finish." />
+<meta property="og:url" content="https://squareartconstruction.com/" />
+<meta property="og:image" content="https://squareartconstruction.com/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Square Art Construction Ltd &mdash; Residential Builders, Calgary" />
+<meta name="twitter:description" content="Residential builders in Calgary — single-family homes, duplexes and townhomes, foundation to finish." />
+<meta name="twitter:image" content="https://squareartconstruction.com/og.png" />
+<meta name="author" content="Square Art Construction Ltd" />
+<meta name="geo.region" content="CA-AB" />
+<meta name="geo.placename" content="Calgary" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "@id": "https://squareartconstruction.com/#business",
+  "name": "Square Art Construction Ltd",
+  "alternateName": "Square Art",
+  "url": "https://squareartconstruction.com/",
+  "logo": "https://squareartconstruction.com/apple-touch-icon.png",
+  "image": "https://squareartconstruction.com/og.png",
+  "telephone": "+1-403-689-0756",
+  "email": "squareartltd@gmail.com",
+  "description": "Residential construction company in Calgary, Alberta. Single-family homes, duplexes, townhomes, additions and renovations \u2014 foundations, framing, roofing, siding, drywall, painting, flooring and finishing carpentry.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Calgary",
+    "addressRegion": "AB",
+    "addressCountry": "CA"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Calgary"
+    },
+    {
+      "@type": "City",
+      "name": "Airdrie"
+    },
+    {
+      "@type": "City",
+      "name": "Cochrane"
+    },
+    {
+      "@type": "City",
+      "name": "Chestermere"
+    },
+    {
+      "@type": "City",
+      "name": "Okotoks"
+    },
+    {
+      "@type": "City",
+      "name": "Strathmore"
+    },
+    {
+      "@type": "City",
+      "name": "Langdon"
+    },
+    {
+      "@type": "City",
+      "name": "De Winton"
+    },
+    {
+      "@type": "City",
+      "name": "Springbank"
+    },
+    {
+      "@type": "City",
+      "name": "Bragg Creek"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "07:00",
+      "closes": "18:00"
+    }
+  ],
+  "priceRange": "$$",
+  "knowsAbout": [
+    "Residential construction",
+    "Home framing",
+    "Foundations",
+    "Roofing",
+    "Siding",
+    "Drywall",
+    "Painting",
+    "Flooring",
+    "Finishing carpentry",
+    "Home additions",
+    "Basement development"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Residential construction services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom home construction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Duplex and infill construction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Townhome construction"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Home additions and second storeys"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Whole-home renovations"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Basement development"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Garages and laneway suites"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Foundations and concrete"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Framing and structure"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Roofing"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Siding and exteriors"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Insulation and drywall"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Painting"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Flooring"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Finishing carpentry"
+        }
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<div class="preloader">
+  <div class="pre-inner">
+    <div><span class="pre-count">0</span><span class="pre-unit">&deg;</span></div>
+    <div class="pre-label label"><span>PLUMB</span>&middot;<span>LEVEL</span>&middot;<span>SQUARE</span></div>
+  </div>
+</div>
+<div class="wipe"></div>
+<div class="grain-layer"></div>
+
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="hd-logo" href="index.html"><span class="sq">SA</span><span class="nm">Square<em>Art</em></span></a>
+    <nav class="hd-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="hd-cta" data-magnetic>Get a quote</a>
+    </nav>
+    <button class="hd-burger" aria-label="Menu"><i></i></button>
+  </div>
+</header>
+<nav class="m-menu"><div>
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="process.html">Process</a><a href="projects.html">Projects</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <div class="label">Calgary &middot; (403) 689-0756</div>
+</div></nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap" style="position:relative;">
+    <div class="hero-bg-num">90&deg;</div>
+    <div class="label label--ember" data-hero-fade>Residential construction &mdash; Calgary &amp; surrounding</div>
+    <h1 class="display-xl" data-hero-title data-premask style="margin-top:18px;">
+      <span class="line-mask"><span class="line">We build houses</span></span>
+      <span class="line-mask"><span class="line">people call <span class="accent">home.</span></span></span>
+    </h1>
+    <p class="lead" data-hero-fade style="margin-top:24px;">Single-family homes, duplexes and townhomes &mdash; taken from bare lot to move-in day by one crew, one supervisor, one standard.</p>
+    <div class="hero-foot">
+      <div class="scroll-cue" data-hero-fade>
+        <span class="tick"></span>
+        <span class="label">Scroll &mdash; watch a home rise</span>
+      </div>
+      <div class="hero-meta" data-hero-fade>
+        <p class="label">EST. CALGARY, AB</p>
+        <p class="label" style="margin-top:6px;">350+ HOMES &middot; 9 TRADES &middot; 0 SHORTCUTS</p>
+      </div>
+    </div>
+    <div class="ph hero-strip" data-hero-fade>
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2200&q=80" alt="Square Art tradesperson at work on a Calgary residential job site" loading="eager" onerror="phFail(this)" />
+      <span class="cap">On site &mdash; structure day, Calgary</span>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap trust-in">
+    <div class="trust-i"><svg viewBox="0 0 24 24"><path d="M12 2 L20 6 L20 12 C20 17 16.5 20.5 12 22 C7.5 20.5 4 17 4 12 L4 6 Z"/><path d="M9 12 L11 14 L15 9"/></svg><div><b>Licensed &amp; Insured</b><span>Alberta prepaid contractor</span></div></div>
+    <div class="trust-i"><svg viewBox="0 0 24 24"><path d="M12 2 L15 9 L22 9 L16.5 13.5 L18.5 21 L12 16.5 L5.5 21 L7.5 13.5 L2 9 L9 9 Z"/></svg><div><b>WCB Alberta Covered</b><span>Every worker, every site</span></div></div>
+    <div class="trust-i"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L16 14"/></svg><div><b>Quotes in 48 Hours</b><span>Send plans, get numbers</span></div></div>
+    <div class="trust-i"><svg viewBox="0 0 24 24"><path d="M3 21 L3 10 L12 3 L21 10 L21 21 Z"/><path d="M9 21 L9 14 L15 14 L15 21"/></svg><div><b>2-Year Workmanship</b><span>Warranty on our work</span></div></div>
+  </div>
+</section>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="sec manifesto">
+  <div class="wrap">
+    <div class="label label--ember" data-reveal>The standard</div>
+    <p data-words style="margin-top:26px;">We build homes &mdash; only homes. Single-family, duplex, townhome. Concrete, framing, roofing, drywall, paint, floors and finishing, every trade held to the same tolerance, so nothing gets lost in a handoff and nothing leaves site until it's square.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT WE BUILD ============ -->
+<section class="sec" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label label--ember" data-reveal>What we build</div>
+        <h2 class="display-lg" data-reveal="lines" style="margin-top:16px;">Residential only.<br />That's the whole point.</h2>
+      </div>
+      <p class="lead" data-reveal style="max-width:26em;">Houses are all we build, and that focus is the whole advantage. Every crew we run has spent its career inside homes &mdash; which is exactly why the details land.</p>
+    </div>
+    <div class="htypes">
+      <div class="htype" data-reveal="scale">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Completed single-family custom home exterior at dusk" loading="lazy" onerror="phFail(this)" /></div>
+        <div class="body">
+          <span class="kicker">01 &mdash; Single-family</span>
+          <h3>Custom &amp; Spec Homes</h3>
+          <p>Bungalows, two-storeys and walkouts &mdash; built to your drawings on your lot or a builder's.</p>
+          <ul><li>Custom homes &amp; acreage builds</li><li>Spec homes for local builders</li><li>Walkout &amp; suited basements</li></ul>
+        </div>
+      </div>
+      <div class="htype" data-reveal="scale" data-delay=".08">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=900&q=80" alt="Duplex and infill home exteriors with clean siding lines" loading="lazy" onerror="phFail(this)" /></div>
+        <div class="body">
+          <span class="kicker">02 &mdash; Duplex &amp; infill</span>
+          <h3>Duplexes &amp; Inner-City Infills</h3>
+          <p>Side-by-sides and front-to-backs on tight lots, where millimetres and neighbours both matter.</p>
+          <ul><li>Semi-detached &amp; full duplexes</li><li>Inner-city infill homes</li><li>Legal secondary suites</li></ul>
+        </div>
+      </div>
+      <div class="htype" data-reveal="scale" data-delay=".16">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1503594384566-461fe158e797?auto=format&fit=crop&w=900&q=80" alt="Wood-framed townhome structures under construction" loading="lazy" onerror="phFail(this)" /></div>
+        <div class="body">
+          <span class="kicker">03 &mdash; Townhomes</span>
+          <h3>Townhome &amp; Rowhouse Blocks</h3>
+          <p>Small residential blocks run unit by unit, with party walls and schedules that actually hold.</p>
+          <ul><li>Townhome &amp; rowhouse projects</li><li>Party-wall &amp; separation framing</li><li>Repeatable unit schedules</li></ul>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:26px; display:flex; gap:18px; flex-wrap:wrap; align-items:center;" data-reveal>
+      <span class="label">Also:</span>
+      <span class="area">Additions &amp; second storeys</span>
+      <span class="area">Whole-home renovations</span>
+      <span class="area">Basement developments</span>
+      <span class="area">Garages &amp; laneway suites</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ON OUR SITES ============ -->
+<section class="sec" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:34px;">
+      <div>
+        <div class="label label--ember" data-reveal>On our sites</div>
+        <h2 class="display-md" data-reveal style="margin-top:12px; font-family:'Clash Display',sans-serif;">The work, as it happens.</h2>
+      </div>
+    </div>
+    <div class="ph-band">
+      <div class="ph" data-reveal="scale"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80" alt="Two Square Art crew members framing a house" loading="lazy" onerror="phFail(this)" /><span class="cap">Framing crew &mdash; day 14</span></div>
+      <div class="ph" data-reveal="scale" data-delay=".08"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80" alt="House plans and hard hat on site during layout" loading="lazy" onerror="phFail(this)" /><span class="cap">Layout &amp; plans review</span></div>
+      <div class="ph" data-reveal="scale" data-delay=".16"><img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=1000&q=80" alt="Roofer installing shingles on a residential roof" loading="lazy" onerror="phFail(this)" /><span class="cap">Roofing &mdash; envelope week</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE: BLUEPRINT → FRAME ============ -->
+<section class="build-sec" id="build">
+  <div class="bp-grid"></div>
+  <div class="build-pin">
+    <div class="wrap build-grid">
+      <div class="build-copy">
+        <div class="label label--ember">From blueprint to move-in day</div>
+        <div class="stage-label" style="margin-top:26px;">
+          <div class="build-stage"><div class="num">01</div><h3>Foundation</h3><p>Excavation, forms, and a 3,200 PSI pour — verified, snapped and bolted before anything rises. Square starts here.</p></div>
+          <div class="build-stage"><div class="num">02</div><h3>Floor System</h3><p>Engineered joists at 16" centres. Glued, screwed, squeak-tested subfloor — a deck you could dance on.</p></div>
+          <div class="build-stage"><div class="num">03</div><h3>Wall Framing</h3><p>Walls framed flat, squared to the millimetre, then lifted. Double headers over every opening.</p></div>
+          <div class="build-stage"><div class="num">04</div><h3>Second Storey</h3><p>Rim, joists, deck, walls — the sequence repeats, the tolerances don't loosen.</p></div>
+          <div class="build-stage"><div class="num">05</div><h3>Roof Structure</h3><p>Trusses craned, braced and blocked to the sealed layout. Flag on the ridge.</p></div>
+          <div class="build-stage"><div class="num">06</div><h3>Roofing &amp; Envelope</h3><p>Shingles, fascia, siding and corner boards — the house gets its skin, warrantied tight against hail and chinooks.</p></div>
+          <div class="build-stage"><div class="num">07</div><h3>Drywall, Paint &amp; Finish</h3><p>Board, tape, level-4 finish, paint, floors, casing and doors. Walkthrough with a level in hand — then keys.</p></div>
+        </div>
+        <div class="build-progress">
+          <div class="label"><span id="build-pct">00</span>% BUILT</div>
+          <div class="bar"><i id="build-bar"></i></div>
+        </div>
+      </div>
+
+      <div class="build-svg-wrap">
+        <svg class="bsvg" viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" aria-label="A two-storey house frame drawing itself from foundation to roof as you scroll">
+          <!-- ground -->
+          <line class="d dim" pathLength="1" x1="70" y1="560" x2="830" y2="560" style="stroke-width:2;stroke:#4a4238" />
+
+          <!-- STAGE 1 — foundation -->
+          <g id="bs1">
+            <path class="d conc" pathLength="1" d="M195 560 V546 H705 V560" />
+            <path class="d conc" pathLength="1" d="M210 546 V500 H690 V546" />
+            <line class="d conc" pathLength="1" x1="330" y1="500" x2="330" y2="546" style="stroke-width:1.5" />
+            <line class="d conc" pathLength="1" x1="450" y1="500" x2="450" y2="546" style="stroke-width:1.5" />
+            <line class="d conc" pathLength="1" x1="570" y1="500" x2="570" y2="546" style="stroke-width:1.5" />
+            <path class="d dim" pathLength="1" d="M240 558 l12 -10 M300 558 l12 -10 M380 558 l12 -10 M460 558 l12 -10 M540 558 l12 -10 M620 558 l12 -10" />
+            <path class="d dim" pathLength="1" d="M210 586 H690 M210 580 V592 M690 580 V592" />
+            <text class="fade" x="450" y="612" text-anchor="middle" font-size="12">14.6 M — 3,200 PSI POUR</text>
+            <path class="d emb" pathLength="1" d="M228 500 v-8 M292 500 v-8 M356 500 v-8 M420 500 v-8 M484 500 v-8 M548 500 v-8 M612 500 v-8 M676 500 v-8" />
+          </g>
+
+          <!-- STAGE 2 — floor system -->
+          <g id="bs2">
+            <line class="d lum-h" pathLength="1" x1="203" y1="497" x2="697" y2="497" />
+            <line class="d lum" pathLength="1" x1="212" y1="470" x2="212" y2="494" />
+            <line class="d lum" pathLength="1" x1="688" y1="470" x2="688" y2="494" />
+            <path class="d lum" pathLength="1" d="M240 470 V494 M270 470 V494 M300 470 V494 M330 470 V494 M360 470 V494 M390 470 V494 M420 470 V494 M450 470 V494 M480 470 V494 M510 470 V494 M540 470 V494 M570 470 V494 M600 470 V494 M630 470 V494 M660 470 V494" />
+            <line class="d lum-h" pathLength="1" x1="198" y1="466" x2="702" y2="466" />
+            <text class="fade" x="740" y="486" font-size="11">JOISTS @ 16" O.C.</text>
+          </g>
+
+          <!-- STAGE 3 — main walls -->
+          <g id="bs3">
+            <line class="d lum-h" pathLength="1" x1="205" y1="462" x2="695" y2="462" />
+            <path class="d lum" pathLength="1" d="M214 330 V458 M248 330 V458 M436 330 V458 M470 330 V458 M504 330 V458 M652 330 V458 M686 330 V458" />
+            <!-- window opening -->
+            <path class="d lum" pathLength="1" d="M292 330 V458 M398 330 V458" />
+            <path class="d lum-h" pathLength="1" d="M288 350 H404 M288 358 H404" />
+            <line class="d lum" pathLength="1" x1="300" y1="414" x2="392" y2="414" />
+            <path class="d lum" pathLength="1" d="M318 414 V458 M346 414 V458 M374 414 V458" />
+            <path class="d emb" pathLength="1" d="M300 362 H392 V410 H300 Z" style="stroke-width:1.5" />
+            <!-- door opening -->
+            <path class="d lum" pathLength="1" d="M538 330 V458 M622 330 V458" />
+            <path class="d lum-h" pathLength="1" d="M532 350 H628 M532 358 H628" />
+            <path class="d emb" pathLength="1" d="M546 362 H614 V458" style="stroke-width:1.5" />
+            <!-- double top plate -->
+            <line class="d lum-h" pathLength="1" x1="200" y1="326" x2="700" y2="326" />
+            <line class="d lum-h" pathLength="1" x1="200" y1="318" x2="700" y2="318" />
+            <text class="fade" x="740" y="400" font-size="11">2×6 @ 16" O.C.</text>
+          </g>
+
+          <!-- STAGE 4 — second storey -->
+          <g id="bs4">
+            <path class="d lum" pathLength="1" d="M212 290 V314 M240 290 V314 M270 290 V314 M300 290 V314 M330 290 V314 M360 290 V314 M390 290 V314 M420 290 V314 M450 290 V314 M480 290 V314 M510 290 V314 M540 290 V314 M570 290 V314 M600 290 V314 M630 290 V314 M660 290 V314 M688 290 V314" />
+            <line class="d lum-h" pathLength="1" x1="198" y1="286" x2="702" y2="286" />
+            <line class="d lum-h" pathLength="1" x1="205" y1="282" x2="695" y2="282" />
+            <path class="d lum" pathLength="1" d="M214 196 V278 M248 196 V278 M420 196 V278 M454 196 V278 M488 196 V278 M652 196 V278 M686 196 V278" />
+            <!-- two upper windows -->
+            <path class="d lum" pathLength="1" d="M286 196 V278 M372 196 V278 M528 196 V278 M614 196 V278" />
+            <path class="d lum-h" pathLength="1" d="M282 210 H376 M524 210 H618" />
+            <path class="d lum" pathLength="1" d="M292 248 H366 M534 248 H608" />
+            <path class="d emb" pathLength="1" d="M294 216 H364 V244 H294 Z M536 216 H606 V244 H536 Z" style="stroke-width:1.5" />
+            <line class="d lum-h" pathLength="1" x1="200" y1="192" x2="700" y2="192" />
+            <line class="d lum-h" pathLength="1" x1="200" y1="184" x2="700" y2="184" />
+          </g>
+
+          <!-- STAGE 5 — roof -->
+          <g id="bs5">
+            <g opacity=".22">
+              <path class="d lum" pathLength="1" d="M172 160 H728 M172 160 L462 44 M728 160 L462 44" />
+            </g>
+            <g opacity=".4">
+              <path class="d lum" pathLength="1" d="M166 170 H734 M166 170 L456 54 M734 170 L456 54" />
+            </g>
+            <line class="d lum-h" pathLength="1" x1="160" y1="180" x2="740" y2="180" />
+            <path class="d lum-h" pathLength="1" d="M160 180 L450 64" />
+            <path class="d lum-h" pathLength="1" d="M740 180 L450 64" />
+            <line class="d lum" pathLength="1" x1="450" y1="72" x2="450" y2="180" />
+            <path class="d lum" pathLength="1" d="M300 124 V180 M600 124 V180" />
+            <path class="d lum" pathLength="1" d="M300 124 L392 180 M600 124 L508 180" />
+            <line class="d emb" pathLength="1" x1="450" y1="64" x2="450" y2="30" />
+            <path class="fade" d="M450 30 L494 39 L450 50 Z" fill="#e85d2f" />
+          </g>
+
+          <!-- STAGE 6 — roofing & envelope: the house gets its skin -->
+          <g id="bs6">
+            <!-- wall siding -->
+            <rect class="fade" x="210" y="188" width="480" height="312" fill="#efe6d6" opacity=".96" />
+            <g class="fade" stroke="#dccdb0" stroke-width="1.2">
+              <path d="M210 206 H690 M210 226 H690 M210 246 H690 M210 266 H690 M210 286 H690 M210 306 H690 M210 340 H690 M210 360 H690 M210 380 H690 M210 400 H690 M210 420 H690 M210 440 H690 M210 460 H690 M210 480 H690" />
+            </g>
+            <!-- corner boards + band board -->
+            <rect class="fade" x="205" y="188" width="9" height="312" fill="#e0d2b6" />
+            <rect class="fade" x="686" y="188" width="9" height="312" fill="#e0d2b6" />
+            <rect class="fade" x="205" y="316" width="490" height="11" fill="#e0d2b6" />
+            <!-- gable siding -->
+            <polygon class="fade" points="186,180 450,74 714,180" fill="#e6d8bf" opacity=".97" />
+            <g class="fade">
+              <rect x="434" y="118" width="32" height="24" rx="2" fill="none" stroke="#b8a888" stroke-width="2" />
+              <path d="M436 126 h28 M436 134 h28" stroke="#b8a888" stroke-width="2" />
+            </g>
+            <!-- roof: thick shingle band + fascia + ridge cap -->
+            <polygon class="fade" points="144,186 450,62 756,186 742,166 450,44 158,166" fill="#4a3d30" />
+            <g class="fade" stroke="#5f5040" stroke-width="1.5">
+              <path d="M216 156 l-10 -13 M296 124 l-10 -13 M376 92 l-10 -13 M684 156 l10 -13 M604 124 l10 -13 M524 92 l10 -13" />
+            </g>
+            <path class="d emb" pathLength="1" d="M144 186 L450 62" style="stroke-width:4" />
+            <path class="d emb" pathLength="1" d="M756 186 L450 62" style="stroke-width:4" />
+            <line class="d lum-h" pathLength="1" x1="428" y1="42" x2="472" y2="42" />
+            <text class="fade" x="742" y="120" font-size="11">ENVELOPE TIGHT ✓</text>
+          </g>
+
+          <!-- STAGE 7 — paint, finish & move-in: a lived-in home -->
+          <g id="bs7">
+            <!-- foundation parged -->
+            <rect class="fade" x="210" y="500" width="480" height="46" fill="#9a958c" opacity=".6" />
+            <!-- main window -->
+            <g class="fade">
+              <rect x="288" y="352" width="116" height="70" fill="none" stroke="#e0d2b6" stroke-width="6" />
+              <rect x="294" y="358" width="104" height="58" fill="#f4c471" stroke="#2b241d" stroke-width="3" />
+              <path d="M346 358 V416 M294 387 H398" stroke="#2b241d" stroke-width="2" />
+            </g>
+            <!-- upper windows -->
+            <g class="fade">
+              <rect x="284" y="206" width="90" height="50" fill="none" stroke="#e0d2b6" stroke-width="5" />
+              <rect x="289" y="211" width="80" height="40" fill="#f4c471" stroke="#2b241d" stroke-width="2.5" />
+              <line x1="329" y1="211" x2="329" y2="251" stroke="#2b241d" stroke-width="2" />
+            </g>
+            <g class="fade">
+              <rect x="526" y="206" width="90" height="50" fill="none" stroke="#e0d2b6" stroke-width="5" />
+              <rect x="531" y="211" width="80" height="40" fill="#f4c471" stroke="#2b241d" stroke-width="2.5" />
+              <line x1="571" y1="211" x2="571" y2="251" stroke="#2b241d" stroke-width="2" />
+            </g>
+            <!-- front door + trim + light + number -->
+            <g class="fade">
+              <rect x="538" y="354" width="84" height="150" fill="none" stroke="#e0d2b6" stroke-width="6" />
+              <rect x="544" y="360" width="72" height="144" fill="#e85d2f" stroke="#2b241d" stroke-width="2.5" />
+              <rect x="553" y="372" width="54" height="52" fill="none" stroke="#c8481f" stroke-width="2.5" />
+              <rect x="553" y="438" width="54" height="52" fill="none" stroke="#c8481f" stroke-width="2.5" />
+              <circle cx="551" cy="434" r="3.5" fill="#2b241d" />
+              <circle cx="521" cy="368" r="5" fill="#f4c471" stroke="#2b241d" stroke-width="1.5" />
+              <line x1="521" y1="373" x2="521" y2="382" stroke="#2b241d" stroke-width="2" />
+              <rect x="466" y="364" width="42" height="24" rx="3" fill="none" stroke="#e0d2b6" stroke-width="2" />
+              <text x="487" y="381" text-anchor="middle" font-size="13" fill="#e0d2b6">90</text>
+            </g>
+            <!-- steps + walkway -->
+            <g class="fade" fill="#8d867c">
+              <rect x="548" y="504" width="64" height="14" />
+              <rect x="540" y="518" width="80" height="14" />
+              <rect x="532" y="532" width="96" height="14" />
+              <rect x="524" y="546" width="112" height="14" />
+            </g>
+            <path class="fade" d="M524 560 L636 560 L700 574 L470 574 Z" fill="#6f6558" opacity=".7" />
+            <!-- landscaping -->
+            <g class="fade">
+              <circle cx="248" cy="544" r="17" fill="#5f6b4a" />
+              <circle cx="272" cy="549" r="12" fill="#6d7a55" />
+              <circle cx="668" cy="547" r="14" fill="#5f6b4a" />
+              <rect x="234" y="556" width="52" height="8" rx="2" fill="#57493a" />
+            </g>
+            <!-- stamp -->
+            <g class="fade">
+              <circle cx="778" cy="80" r="38" fill="none" stroke="#e85d2f" stroke-width="2" transform="rotate(-12 778 80)" />
+              <text x="778" y="77" text-anchor="middle" font-size="10.5" fill="#e85d2f" transform="rotate(-12 778 80)">MOVE-IN</text>
+              <text x="778" y="92" text-anchor="middle" font-size="10.5" fill="#e85d2f" transform="rotate(-12 778 80)">READY ✓</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRADES ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label label--ember" data-reveal>Under one roof</div>
+        <h2 class="display-lg" data-reveal="lines" style="margin-top:16px;">Nine trades.<br />One tolerance.</h2>
+      </div>
+      <a href="services.html" class="btn-line" data-reveal>All services <span>&rarr;</span></a>
+    </div>
+    <p class="lead" data-reveal style="margin-bottom:44px;">Every trade delivered by our own crews, checked by the same supervisor, and held to the same 90&deg; &mdash; because a perfect frame deserves a perfect finish, and a schedule only holds when one company owns it end to end.</p>
+    <div class="trade-grid">
+      <a class="trade-cell" href="services.html" data-reveal="fade"><span class="n">01</span><h3>Foundations &amp; Concrete</h3></a>
+      <a class="trade-cell" href="services.html" data-reveal="fade"><span class="n">02</span><h3>Framing &amp; Structure</h3></a>
+      <a class="trade-cell" href="services.html" data-reveal="fade"><span class="n">03</span><h3>Roofing</h3></a>
+      <a class="trade-cell" href="services.html" data-reveal="fade"><span class="n">04</span><h3>Siding &amp; Exteriors</h3></a>
+      <a class="trade-cell" href="services.html" data-reveal="fade"><span class="n">05</span><h3>Insulation &amp; Drywall</h3></a>
+      <a class="trade-cell" href="services.html" data-reveal="fade"><span class="n">06</span><h3>Painting</h3></a>
+      <a class="trade-cell" href="services.html" data-reveal="fade"><span class="n">07</span><h3>Flooring</h3></a>
+      <a class="trade-cell" href="services.html" data-reveal="fade"><span class="n">08</span><h3>Finishing &amp; Millwork</h3></a>
+      <a class="trade-cell" href="services.html" data-reveal="fade"><span class="n">09</span><h3>Full Builds &amp; Renos</h3></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="sec on-dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label label--ember" data-reveal>How it goes</div>
+        <h2 class="display-lg" data-reveal="lines" style="margin-top:16px;">Five steps, no surprises.</h2>
+      </div>
+      <a href="process.html" class="btn-line" data-reveal>Full process <span>&rarr;</span></a>
+    </div>
+    <div class="proc">
+      <div class="proc-s" data-reveal><div class="n">01</div><h3>Site Visit</h3><p>We walk the lot or the house, talk through what you want, and tell you honestly what it takes.</p></div>
+      <div class="proc-s" data-reveal data-delay=".06"><div class="n">02</div><h3>Quote &amp; Schedule</h3><p>A line-by-line quote within 48 hours, plus a written schedule you can plan a move around.</p></div>
+      <div class="proc-s" data-reveal data-delay=".12"><div class="n">03</div><h3>Permits &amp; Prep</h3><p>Drawings finalized, permits pulled, materials ordered and the site made ready before day one.</p></div>
+      <div class="proc-s" data-reveal data-delay=".18"><div class="n">04</div><h3>We Build</h3><p>Foundation to finish with weekly photo updates and one supervisor you can text directly.</p></div>
+      <div class="proc-s" data-reveal data-delay=".24"><div class="n">05</div><h3>Walkthrough</h3><p>We walk it with a level in hand, fix the list, hand over keys and a 2-year warranty.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROOF ============ -->
+<section class="sec">
+  <div class="wrap" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px,6vw,90px); align-items:start;">
+    <div>
+      <div class="label label--ember" data-reveal>Why homeowners stay</div>
+      <h2 class="display-lg" data-reveal="lines" style="margin-top:16px;">One contractor. Zero handoff chaos.</h2>
+      <p class="lead" data-reveal style="margin-top:24px;">When the framer, drywaller and painter answer to the same supervisor, nothing falls between trades. One schedule, one quality bar, one number to call &mdash; from the first shovel to the walkthrough.</p>
+      <a href="projects.html" class="btn-big" data-magnetic data-reveal style="margin-top:36px;">See recent homes <span>&rarr;</span></a>
+    </div>
+    <ul class="check-list" data-reveal="fade" style="columns:1;">
+      <li>Licensed, insured &amp; WCB-covered crews</li>
+      <li>Walls plumb within 1/8" over 8 feet &mdash; framed and finished</li>
+      <li>Sealed engineering followed to the letter</li>
+      <li>One supervisor across every trade and stage</li>
+      <li>Weekly photo updates, every project</li>
+      <li>2-year workmanship warranty in writing</li>
+    </ul>
+  </div>
+  <div class="wrap">
+    <div class="ph proof-ph" data-reveal="scale">
+      <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2000&q=80" alt="Square Art site supervisor reviewing work on a residential build" loading="lazy" onerror="phFail(this)" />
+      <span class="cap">A supervisor on every stage &mdash; no exceptions</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="sec on-dark" style="padding-top:clamp(70px,8vw,110px); padding-bottom:clamp(70px,8vw,110px);">
+  <div class="wrap stats">
+    <div class="stat" data-reveal><h3><span data-count="350">0</span><sup>+</sup></h3><span class="label">Homes completed</span></div>
+    <div class="stat" data-reveal data-delay=".08"><h3><span data-count="9">0</span></h3><span class="label">Trades in-house</span></div>
+    <div class="stat" data-reveal data-delay=".16"><h3><span data-count="15">0</span><sup>+</sup></h3><span class="label">Years on site</span></div>
+    <div class="stat" data-reveal data-delay=".24"><h3><span data-count="100">0</span><sup>%</sup></h3><span class="label">First-pass inspections</span></div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="m-track"><span>Single-family homes<i>&middot;</i></span><span>Duplexes<i>&middot;</i></span><span>Townhomes<i>&middot;</i></span><span>Infills<i>&middot;</i></span><span>Additions<i>&middot;</i></span><span>Renovations<i>&middot;</i></span><span>Garages<i>&middot;</i></span></div>
+</div>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label label--ember" data-reveal>From the people who live there</div>
+        <h2 class="display-lg" data-reveal="lines" style="margin-top:16px;">Homeowners, not clients.</h2>
+      </div>
+    </div>
+    <div class="quotes">
+      <div class="quote" data-reveal>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;They framed our house in the winter and still hit the date they gave us in September. Every wall is dead straight &mdash; our trim guy actually commented on it.&rdquo;</p>
+        <div class="who"><b>Dave &amp; Manpreet K.</b><span>Custom home &middot; Cochrane</span></div>
+      </div>
+      <div class="quote" data-reveal data-delay=".08">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;We'd been burned by a reno crew before. Having one supervisor for framing, drywall and paint meant nobody could point fingers. Site was swept every single night.&rdquo;</p>
+        <div class="who"><b>Jennifer R.</b><span>Whole-home renovation &middot; Altadore</span></div>
+      </div>
+      <div class="quote" data-reveal data-delay=".16">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&ldquo;I build six to eight homes a year and Square Art is the only trade I don't have to babysit. Passes inspection first time, every time.&rdquo;</p>
+        <div class="who"><b>Sukhdeep S.</b><span>Local home builder &middot; Calgary</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICE AREA ============ -->
+<section class="sec on-dark" style="padding-top:clamp(70px,8vw,100px); padding-bottom:clamp(70px,8vw,100px);">
+  <div class="wrap" style="display:grid; grid-template-columns:1fr 1.2fr; gap:clamp(30px,5vw,70px); align-items:center;">
+    <div>
+      <div class="label label--ember" data-reveal>Where we build</div>
+      <h2 class="display-md" data-reveal style="margin-top:14px;">Calgary and an hour around it.</h2>
+      <p class="lead" data-reveal style="margin-top:16px;">If your lot is inside this ring, we can be on it.</p>
+    </div>
+    <div class="areas" data-reveal="fade"><span class="area">Calgary</span><span class="area">Airdrie</span><span class="area">Cochrane</span><span class="area">Chestermere</span><span class="area">Okotoks</span><span class="area">Strathmore</span><span class="area">Langdon</span><span class="area">De Winton</span><span class="area">Springbank</span><span class="area">Bragg Creek</span></div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="label label--ember" data-reveal>Have a home to build?</div>
+    <div class="ft-big" data-reveal="lines">Let's build<br /><a href="contact.html">square. &rarr;</a></div>
+    <div class="ft-grid">
+      <div><p style="max-width:34em;">Square Art Construction Ltd &mdash; residential construction from foundation to finish. Single-family homes, duplexes, townhomes, additions and renovations across Calgary, Airdrie, Cochrane, Chestermere and Okotoks.</p></div>
+      <div><ul>
+        <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="process.html">Process</a></li><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div><ul>
+        <li><a href="tel:+14036890756">(403) 689-0756</a></li>
+        <li><a href="mailto:squareartltd@gmail.com">squareartltd@gmail.com</a></li>
+        <li>Mon&ndash;Sat &middot; 7:00&ndash;18:00</li><li>Licensed &middot; Insured &middot; WCB AB</li>
+      </ul></div>
+    </div>
+    <div class="ft-bottom"><span>&copy; <span data-year></span> Square Art Construction Ltd</span><span>Residential construction only &mdash; every corner 90&deg;</span></div>
+  </div>
+</footer>
+
+<div class="qbar">
+  <a href="tel:+14036890756">Call now</a>
+  <a href="contact.html" class="em">Free quote</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="site.js"></script>
+<script>
+/* ---- signature scroll-scrubbed build ---- */
+document.addEventListener("DOMContentLoaded", () => {
+  if (!window.gsap || SA.reduced) return;
+  const stages = gsap.utils.toArray(".build-stage");
+  const pct = document.getElementById("build-pct");
+  const bar = document.getElementById("build-bar");
+
+  gsap.set(stages, { autoAlpha: 0, y: 18 });
+  gsap.set(stages[0], { autoAlpha: 1, y: 0 });
+
+  const tl = gsap.timeline({
+    defaults: { ease: "none" },
+    scrollTrigger: {
+      trigger: ".build-sec",
+      start: "top top",
+      end: "+=4800",
+      pin: ".build-pin",
+      scrub: 0.6,
+      onUpdate: (self) => {
+        const p = Math.round(self.progress * 100);
+        if (pct) pct.textContent = String(p).padStart(2, "0");
+        if (bar) bar.style.transform = `scaleX(${self.progress})`;
+      },
+    },
+  });
+
+  for (let i = 1; i <= 7; i++) {
+    const g = `#bs${i}`;
+    if (i > 1) {
+      tl.to(stages[i - 2], { autoAlpha: 0, y: -18, duration: 0.25 }, ">")
+        .to(stages[i - 1], { autoAlpha: 1, y: 0, duration: 0.25 }, "<");
+    }
+    const hasDraw = document.querySelector(`${g} .d`);
+    if (hasDraw) tl.to(`${g} .d`, { strokeDashoffset: 0, duration: i >= 6 ? 0.7 : 1, stagger: 0.045 }, i === 1 ? 0.1 : ">-0.1");
+    const hasFade = document.querySelector(`${g} .fade`);
+    if (hasFade) tl.to(`${g} .fade`, { autoAlpha: 1, duration: 0.35, stagger: i >= 6 ? 0.14 : 0.08 }, i >= 6 ? ">-0.5" : ">-0.2");
+  }
+  tl.to(["#bs3", "#bs4"], { autoAlpha: 0.15, duration: 0.4 }, ">-0.3");
+  tl.to({}, { duration: 0.8 });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "Square Art Construction Ltd",
+  "short_name": "Square Art",
+  "description": "Residential construction in Calgary \u2014 foundation to finish.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F7F2E8",
+  "theme_color": "#F7F2E8",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
