@@ -579,3 +579,119 @@ html.reduced .preloader { display: none; }
   .stats { grid-template-columns: 1fr 1fr; }
   .ft-grid { grid-template-columns: 1fr; }
 }
+
+
+/* ============================================================
+   MOBILE HARDENING
+   Added after live testing at 375px. Keeps every layout single
+   column on phones, kills sideways scroll, and turns the pinned
+   build animation into a normal stacked section (no scroll
+   hijacking on a small screen).
+   ============================================================ */
+
+html { overflow-x: hidden; }
+body { overflow-x: hidden; }
+
+/* Sections whose two-column grid is set inline in the HTML.
+   Inline styles beat normal rules, so these need !important. */
+@media (max-width: 880px) {
+  .wrap[style*="grid-template-columns"] {
+    display: block !important;
+    direction: ltr !important;
+  }
+  .wrap[style*="grid-template-columns"] > * + * {
+    margin-top: clamp(34px, 7vw, 54px);
+  }
+}
+
+/* Hero watermark must never widen the page */
+@media (max-width: 880px) {
+  .hero-bg-num {
+    right: -8% !important;
+    top: 18% !important;
+    font-size: 30vw !important;
+  }
+}
+@media (max-width: 560px) {
+  .hero-bg-num { display: none !important; }
+}
+
+/* Trust bar */
+@media (max-width: 880px) and (min-width: 621px) {
+  .trust-i { padding: 20px 16px; gap: 12px; }
+  .trust-i b { font-size: 14.5px; }
+  .trust-i span { font-size: 12px; }
+}
+@media (max-width: 620px) {
+  .trust-in { grid-template-columns: 1fr; }
+  .trust-i {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding: 16px 2px;
+  }
+  .trust-i:last-child { border-bottom: none; }
+  .on-dark .trust-i { border-bottom-color: var(--line-dark); }
+}
+
+/* Project rows stack instead of squeezing */
+@media (max-width: 700px) {
+  .proj-row { grid-template-columns: 1fr; gap: 12px; padding: 26px 2px; }
+  .proj-row .meta { flex-wrap: wrap; gap: 8px 18px; }
+  .proj-row:hover h3 { transform: none; }
+  .svc-row:hover { padding-left: 8px; }
+  .faq .ans { padding-right: 0; }
+  .faq summary { padding-right: 38px; }
+}
+
+/* Service rows: photo on top, text below */
+@media (max-width: 700px) {
+  .svc-row.with-ph { grid-template-columns: 48px 1fr; gap: 14px 16px; padding: 26px 2px; }
+  .svc-row.with-ph .svc-ph { grid-column: 1 / -1; width: 100%; height: 190px; }
+  .svc-row .num { font-size: 1.9rem; }
+  .svc-row .arr { display: none; }
+}
+
+/* Stats stay two-up but tighter */
+@media (max-width: 430px) {
+  .stats { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .stat { padding: 20px 6px; }
+  .stat .lbl, .stat .label { font-size: 11px; letter-spacing: 1.6px; }
+}
+
+/* Comfortable thumb targets */
+@media (pointer: coarse) {
+  .m-menu a { padding: 14px 0; }
+  .btn-big { padding: 18px 30px; }
+  .area, .pill { padding: 12px 20px; }
+  .hd-cta { padding: 12px 22px; }
+  .f-field input, .f-field select, .f-field textarea { padding: 15px 2px; font-size: 16px; }
+}
+
+/* iOS zooms any input under 16px on focus - keep them at 16 */
+@media (max-width: 760px) {
+  input, select, textarea { font-size: 16px; }
+}
+
+/* Build section becomes a normal stacked block on phones */
+@media (max-width: 880px) {
+  .build-pin { min-height: 0; padding: 64px 0 44px; display: block; }
+  .build-copy .stage-label { min-height: 0; position: static; }
+  .build-stage {
+    position: static;
+    opacity: 1;
+    margin-bottom: 22px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line-dark);
+  }
+  .build-stage:last-child { border-bottom: none; }
+  .build-progress { display: none; }
+  .build-svg-wrap { margin-bottom: 28px; }
+  .bsvg .d { stroke-dashoffset: 0 !important; animation: none !important; opacity: 1 !important; }
+  .bsvg .fade { opacity: 1 !important; }
+}
+
+/* Long words (emails, URLs) must not push the page sideways */
+@media (max-width: 760px) {
+  p, li, h1, h2, h3, .ft-big, .display-md { overflow-wrap: break-word; }
+  .ft-big { font-size: clamp(2.2rem, 12vw, 4rem); }
+}
