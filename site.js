@@ -265,3 +265,74 @@
     console.log("%c SQUARE ART — built plumb, level & square. Check our corners: they're 90°. ", "background:#E85D2F;color:#F7F2E8;padding:6px 10px;border-radius:4px;font-family:monospace");
   });
 })();
+
+
+/* ============================================================
+   MOBILE BEHAVIOUR
+   Added after testing the live site at 375px wide.
+   Self-contained so it can be appended without touching the
+   main module above.
+   ============================================================ */
+(function () {
+  "use strict";
+  var PHONE = "(max-width: 880px)";
+
+  function onReady(fn) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
+  }
+
+  onReady(function () {
+    var qq = function (s) { return [].slice.call(document.querySelectorAll(s)); };
+
+    /* --- no scroll-hijacked pinning on phones ---
+       Pinning the build section costs several screen-heights of scroll
+       before the page moves on. Kill any pinned ScrollTrigger, clear the
+       inline styles GSAP set, and let the CSS show the stages stacked
+       with the drawing already complete. */
+    if (window.matchMedia(PHONE).matches && window.gsap) {
+      setTimeout(function () {
+        if (window.ScrollTrigger) {
+          ScrollTrigger.getAll().forEach(function (st) {
+            if (st.pin) st.kill(true);
+          });
+        }
+        var stages = qq(".build-stage");
+        if (stages.length) gsap.set(stages, { clearProps: "all" });
+        qq(".bsvg .d").concat(qq(".bsvg .fade")).forEach(function (n) {
+          n.removeAttribute("style");
+        });
+        if (window.ScrollTrigger) ScrollTrigger.refresh();
+      }, 350);
+    }
+
+    /* --- failsafes ---
+       If the animation frame loop is ever starved (backgrounded tab, a
+       slow device, a CDN script that fails), content must never be left
+       mid-animation and invisible. Force the finished state. */
+    setTimeout(function () {
+      var pre = document.querySelector(".preloader");
+      if (pre && pre.style.display !== "none" && pre.getBoundingClientRect().bottom > 0) {
+        pre.style.display = "none";
+      }
+    }, 6000);
+
+    setTimeout(function () {
+      if (!window.gsap) return;
+      var lines = qq("[data-hero-title] .line");
+      var stuck = lines.filter(function (l) {
+        var t = getComputedStyle(l).transform;
+        return t && t !== "none" && t.indexOf("0, 0)") === -1;
+      });
+      if (stuck.length) gsap.set(lines, { clearProps: "all" });
+      qq("[data-hero-fade]").forEach(function (el) {
+        if (parseFloat(getComputedStyle(el).opacity) < 0.9) {
+          gsap.set(el, { clearProps: "all" });
+        }
+      });
+    }, 4500);
+  });
+})();
