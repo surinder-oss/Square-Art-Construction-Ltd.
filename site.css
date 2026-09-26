@@ -66,33 +66,6 @@ h1, h2, h3 { font-family: "Clash Display", "Oswald", sans-serif; font-weight: 60
 
 .lead { font-size: clamp(1.05rem, 1.5vw, 1.3rem); color: var(--mut); max-width: 34em; }
 
-/* ---------- preloader ---------- */
-.preloader {
-  position: fixed; inset: 0; z-index: 99;
-  background: var(--ink);
-  color: var(--paper);
-  display: grid; place-items: center;
-}
-.preloader .pre-inner { text-align: center; }
-.preloader .pre-count {
-  font-family: "Clash Display", sans-serif;
-  font-size: clamp(4rem, 12vw, 9rem);
-  font-weight: 600;
-  line-height: 1;
-  display: inline-block;
-}
-.preloader .pre-unit { font-family: "Space Mono", monospace; font-size: 1.2rem; color: var(--ember); }
-.preloader .pre-label { margin-top: 14px; }
-.preloader .pre-label span { display: inline-block; margin: 0 6px; }
-
-/* ---------- page wipe ---------- */
-.wipe {
-  position: fixed; inset: 0; z-index: 98;
-  background: var(--ember);
-  transform: scaleY(0);
-  pointer-events: none;
-}
-
 /* ---------- grain ---------- */
 .grain-layer {
   position: fixed; inset: -60%; width: 220%; height: 220%;
@@ -560,7 +533,6 @@ body.menu-open .hd-burger i { opacity: 0; }
   .grain-layer, .scroll-cue .tick::after { animation: none !important; }
   * { transition-duration: .01ms !important; }
 }
-html.reduced .preloader { display: none; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 960px) {
